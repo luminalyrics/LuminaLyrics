@@ -15,7 +15,7 @@ export class AdBanner implements AfterViewInit {
       (window as any).adsbygoogle = (window as any).adsbygoogle || [];
       (window as any).adsbygoogle.push({});
     } catch (e) {
-      console.error('Erreur lors du chargement de l\\'annonce AdSense:', e);
+      console.error("Erreur lors du chargement de l'annonce AdSense:", e);
     }
   }
 }
