@@ -23,9 +23,9 @@ export class GeneratorComponent implements OnDestroy {
   readonly presets = [
     {
       id: 'rap',
-      name: 'RAP & DRILL',
+      name: 'STYLE DYNAMIQUE',
       description: 'Police Impact, fond sombre désaturé, effets glitchs accentués et rythme de beat marqué.',
-      badge: 'STYLE RAP',
+      badge: 'DYNAMIQUE',
       options: {
         resolution: '720p',
         fps: 30,
@@ -37,8 +37,8 @@ export class GeneratorComponent implements OnDestroy {
         karaoke_effect: true,
         text_position: 'bottom',
         text_y_offset: 20,
-        visualizer_type: 'bars',
-        visualizer_color: '#ffd700', // Yellow
+        visualizer_type: 'none',
+        visualizer_color: '#ffd700',
         bass_zoom_sens: 0.8,
         bass_flash_sens: 0.6,
         glitch_sens: 0.5,
@@ -50,21 +50,21 @@ export class GeneratorComponent implements OnDestroy {
     },
     {
       id: 'lofi',
-      name: 'LO-FI RETRO',
-      description: "Police Georgia chaleureuse, couleurs chaudes sépia, visualiseur d'ondes douces et effets apaisés.",
-      badge: 'STYLE LO-FI',
+      name: 'STYLE RÉTRO',
+      description: "Police Georgia chaleureuse, couleurs chaudes sépia et effets apaisés.",
+      badge: 'RÉTRO',
       options: {
         resolution: '720p',
         fps: 30,
         font_family: 'georgia',
         font_size: 38,
-        font_color: '#f57b42', // Orange
+        font_color: '#f57b42',
         outline_color: '#111111',
         outline_width: 1,
         karaoke_effect: false,
         text_position: 'middle',
         text_y_offset: 0,
-        visualizer_type: 'waveform',
+        visualizer_type: 'none',
         visualizer_color: '#f57b42',
         bass_zoom_sens: 0.2,
         bass_flash_sens: 0.1,
@@ -77,9 +77,9 @@ export class GeneratorComponent implements OnDestroy {
     },
     {
       id: 'electro',
-      name: 'NEON GLITCH',
-      description: 'Police Impact, visualiseur circulaire vert fluo, effets de glitchs et zooms de basses extrêmes.',
-      badge: 'STYLE NEON',
+      name: 'STYLE NÉON',
+      description: 'Police Impact, effets de glitchs et zooms de basses extrêmes.',
+      badge: 'NÉON',
       options: {
         resolution: '720p',
         fps: 30,
@@ -91,8 +91,8 @@ export class GeneratorComponent implements OnDestroy {
         karaoke_effect: true,
         text_position: 'bottom',
         text_y_offset: -20,
-        visualizer_type: 'circle',
-        visualizer_color: '#32a852', // Neon Green
+        visualizer_type: 'none',
+        visualizer_color: '#32a852',
         bass_zoom_sens: 0.7,
         bass_flash_sens: 0.8,
         glitch_sens: 0.8,
@@ -104,9 +104,9 @@ export class GeneratorComponent implements OnDestroy {
     },
     {
       id: 'minimalist',
-      name: 'MINIMAL ZEN',
-      description: 'Style épuré sans visualiseur, police Arial sans fioritures, pour une mise en valeur brute des images.',
-      badge: 'STYLE ZEN',
+      name: 'STYLE ÉPURÉ',
+      description: 'Style épuré, police Arial sans fioritures, pour une mise en valeur brute des images.',
+      badge: 'ÉPURÉ',
       options: {
         resolution: '1080p',
         fps: 30,
@@ -144,7 +144,7 @@ export class GeneratorComponent implements OnDestroy {
     karaoke_effect: true,
     text_position: 'bottom',
     text_y_offset: 20,
-    visualizer_type: 'bars',
+    visualizer_type: 'none',
     visualizer_color: '#ffd700',
     bass_zoom_sens: 0.8,
     bass_flash_sens: 0.6,
@@ -204,7 +204,7 @@ export class GeneratorComponent implements OnDestroy {
   };
 
   // Tabs for customization panel
-  activeTab: 'video' | 'lyrics' | 'visualizer' | 'effects' = 'video';
+  activeTab: 'video' | 'lyrics' | 'effects' = 'video';
 
   // Generation status
   currentStep = 1; // 1: Files, 2: Settings, 3: Generation
@@ -247,7 +247,7 @@ export class GeneratorComponent implements OnDestroy {
   }
 
   // Set active tab
-  setTab(tab: 'video' | 'lyrics' | 'visualizer' | 'effects') {
+  setTab(tab: 'video' | 'lyrics' | 'effects') {
     this.activeTab = tab;
   }
 

@@ -134,7 +134,6 @@
       <div class="tabs-container">
         <button class="tab-btn" [class.active]="activeTab === 'video'" (click)="setTab('video')">VIDÉO</button>
         <button class="tab-btn" [class.active]="activeTab === 'lyrics'" (click)="setTab('lyrics')">PAROLES</button>
-        <button class="tab-btn" [class.active]="activeTab === 'visualizer'" (click)="setTab('visualizer')">VISUALISEUR</button>
         <button class="tab-btn" [class.active]="activeTab === 'effects'" (click)="setTab('effects')">EFFETS</button>
       </div>
 
@@ -321,41 +320,6 @@
           </div>
         }
 
-        <!-- Visualizer Config Tab -->
-        @if (activeTab === 'visualizer') {
-          <div class="config-grid">
-            <div class="form-group">
-              <label>TYPE DE VISUALISEUR</label>
-              <div class="radio-group">
-                <label class="radio-btn notranslate" spellcheck="false" spellcheck="false" [class.selected]="options.visualizer_type === 'bars'">
-                  <input type="radio" [(ngModel)]="options.visualizer_type" name="visualizer_type" value="bars">
-                  <span>BARRES</span>
-                </label>
-                <label class="radio-btn notranslate" spellcheck="false" spellcheck="false" [class.selected]="options.visualizer_type === 'waveform'">
-                  <input type="radio" [(ngModel)]="options.visualizer_type" name="visualizer_type" value="waveform">
-                  <span>ONDE</span>
-                </label>
-                <label class="radio-btn notranslate" spellcheck="false" spellcheck="false" [class.selected]="options.visualizer_type === 'circle'">
-                  <input type="radio" [(ngModel)]="options.visualizer_type" name="visualizer_type" value="circle">
-                  <span>CERCLE</span>
-                </label>
-                <label class="radio-btn notranslate" spellcheck="false" spellcheck="false" [class.selected]="options.visualizer_type === 'none'">
-                  <input type="radio" [(ngModel)]="options.visualizer_type" name="visualizer_type" value="none">
-                  <span>AUCUN</span>
-                </label>
-              </div>
-            </div>
-
-            @if (options.visualizer_type !== 'none') {
-              <div class="form-group">
-                <label>COULEUR VISUALISEUR</label>
-                <div class="color-picker-wrapper">
-                  <input type="color" [(ngModel)]="options.visualizer_color" class="color-input">
-                </div>
-              </div>
-            }
-          </div>
-        }
 
         <!-- Audio Reactivity Tab -->
         @if (activeTab === 'effects') {
