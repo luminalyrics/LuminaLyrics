@@ -30,18 +30,7 @@
   border-right: none; /* No space/border between images as requested */
 }
 
-/* Give each column a distinct background image */
-.col-1 {
-  background-image: url('images/home/img-9.jpg');
-}
 
-.col-2 {
-  background-image: url('images/home/img-rap.jpg');
-}
-
-.col-3 {
-  background-image: url('images/home/img-11.jpg');
-}
 
 /* Central Overlay Button */
 .central-overlay-button {
